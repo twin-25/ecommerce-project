@@ -1,16 +1,18 @@
-
+import { useEffect, useState} from "react";
 import { Header } from "../components/Header";
 import './HomePage.css';
-import { products } from "../../starting-code/data/products";
 import axios from 'axios';
 
 
 export function HomePage() {
+  const [products, setProducts] = useState([]);
+  useEffect(()=>{
+    axios.get('http://localhost:3000/api/products').then((response) =>{
+      setProducts(response.data);
+    });
 
-  axios.get('http://localhost:3000/api/products')
-  .then((response) =>{
-    console.log(response.data)
-  })
+  },[]);
+  
   return (
     <>
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
