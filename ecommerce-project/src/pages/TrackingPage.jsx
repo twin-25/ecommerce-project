@@ -7,7 +7,7 @@ export function TrackingPage() {
     <>
     <title>TrackingPage</title>
     <link rel="icon" type="image/svg+xml" href="tracking-favicon.png" />
-    <Header/>
+    <Header />
       <div className="tracking-page">s
         <div className="order-tracking">
           <Link className="back-to-orders-link link-primary" to="/orders">
