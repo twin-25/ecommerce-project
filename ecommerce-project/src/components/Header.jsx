@@ -3,7 +3,7 @@ import './header1.css'
 
 
 
-export function Header({cart}) {
+export function Header({cart = []}) {
   let totalQuantity = 0;
   cart.forEach((cartItem) =>{
     totalQuantity += cartItem.quantity;

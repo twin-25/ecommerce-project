@@ -3,11 +3,11 @@ import { Header } from "../components/Header";
 import logo from '../../public/error.png';
 
 
-export function ErrorPage() {
+export function ErrorPage({cart}) {
   return(
     <>
       <title>Error</title>
-      <Header/>
+      <Header cart = {cart}/>
       
       <img src = {logo} />
     </>

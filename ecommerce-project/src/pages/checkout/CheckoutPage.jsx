@@ -20,7 +20,7 @@ export function CheckoutPage({ cart }) {
   return (
     <>
       <title>Checkout</title>
-      <CheckoutHeader />
+      <CheckoutHeader cart={cart}/>
       <link rel="icon" type="image/svg+xml" href="cart-favicon.png" />
 
       <div className="checkout-page">
