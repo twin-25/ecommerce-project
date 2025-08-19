@@ -1,6 +1,6 @@
 import { formatMoney } from "../../utils/money"
 import { DeliveryOptions } from "./DeliveryOptions"
-export function CartItemDetails({cartItem, deliveryOptions}) {
+export function CartItemDetails({cartItem, deliveryOptions, loadCart}) {
   return (<>
     
                   <img className="product-image"
@@ -25,7 +25,7 @@ export function CartItemDetails({cartItem, deliveryOptions}) {
                       </span>
                     </div>
                   </div>
-                  <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={cartItem} />
+                  <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={cartItem} loadCart = {loadCart} />
                   </>
   )
 }
