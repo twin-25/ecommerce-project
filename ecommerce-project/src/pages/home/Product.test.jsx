@@ -3,6 +3,8 @@ import { Product } from './Product';
 import { render, screen } from '@testing-library/react';
 
 
+vi.mock('axios');
+
 describe('product component', ()=>{
   it('displays the product  details correctly', () =>{
     const product = {
@@ -27,4 +29,6 @@ describe('product component', ()=>{
   ).toHaveAttribute('src', 'images/ratings/rating-40.png');
     expect(screen.getByText('127')).toBeInTheDocument();
   })
+
+  
 })
