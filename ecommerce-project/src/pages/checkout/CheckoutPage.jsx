@@ -6,7 +6,6 @@ import { OrderSummary } from './OrderSummary';
 import { PaymentSummary } from './PaymentSummary';
 
 export function CheckoutPage({ cart, loadCart }) {
-  console.log(cart)
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState([]);
 
@@ -14,6 +13,8 @@ export function CheckoutPage({ cart, loadCart }) {
     axios.get('/api/delivery-options?expand=estimatedDeliveryTime').then((response) => {
       setDeliveryOptions(response.data);
     })
+  }, [])
+  useEffect(() =>{
     axios.get('api/payment-summary').then((response) => {
       setPaymentSummary(response.data)
     })
