@@ -19,7 +19,7 @@ export function OrdersDetailsGrid({ order, loadCart }) {
           </div>
           <div className="product-details">
             <div className="product-name">
-              {orderProduct.name}
+              {orderProduct.product.name}
             </div>
             <div className="product-delivery-date">
               Arriving on: {dayjs(orderProduct.estimatedDeliveryTimeMs).format("MMMM D")}
