@@ -17,7 +17,6 @@ export function OrdersDetailsGrid({ order, loadCart }) {
           <div className="product-image-container">
             <img src={orderProduct.product.image} />
           </div>
-
           <div className="product-details">
             <div className="product-name">
               {orderProduct.name}
